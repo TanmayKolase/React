@@ -6,30 +6,33 @@ import {
   NavLink,
 } from "react-router-dom";
 import ReactHookForm from "./components/ReactHookForm";
-
+import Home from "./components/Home";
+import RegistrationForm from "./components/RegistrationForm";
 function App() {
   return (
-    <>
-      <h1>Welcome to the React App</h1>
-      <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/reactHookForm">React Hook Form</NavLink>
-              </li>
-            </ul>
-          </nav>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/reactHookForm">React Hook Form</NavLink>
+            </li>
+            <li>
+              <NavLink to="/registrationForm">Registration Form</NavLink>
+            </li>
+          </ul>
+        </nav>
 
-          <Routes>
-            <Route path="/reactHookForm" element={<ReactHookForm />} />
-          </Routes>
-        </div>
-      </Router>
-    </>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reactHookForm" element={<ReactHookForm />} />
+          <Route path="/registrationForm" element={<RegistrationForm />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
