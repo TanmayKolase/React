@@ -11,7 +11,7 @@ import MultiInputFormHandle from "./components/MultiInputFormHandle";
 import ExpandableSection from "./components/ExpandableSection";
 import ImageGallery from "./components/ImageGallery";
 import Home from "./components/Home";
-
+import UseRefFormHandle from "./components/UseRefFormHandle";
 function App() {
   return (
     <>
@@ -38,6 +38,9 @@ function App() {
               <li>
                 <NavLink to="/imageGallery">Image Gallery</NavLink>
               </li>
+              <li>
+                <NavLink to="/useRefFormHandle">Use Ref Form Handle</NavLink>
+              </li>
             </ul>
           </nav>
 
@@ -53,6 +56,7 @@ function App() {
             />
             <Route path="/expandableSection" element={<ExpandableSection />} />
             <Route path="/imageGallery" element={<ImageGallery />} />
+            <Route path="/useRefFormHandle" element={<UseRefFormHandle />} />
           </Routes>
         </div>
       </Router>
